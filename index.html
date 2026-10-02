@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Movie Ticket Booking</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🎬 Movie Ticket Booking</h1>
+        <p>Book your movie tickets easily</p>
+    </header>
+
+    <main>
+
+        <!-- Movie Section -->
+        <section class="card">
+
+            <h2>🎥 Movie Details</h2>
+
+            <h3>Leo</h3>
+
+            <p>Genre: Action</p>
+            <p>Language: Tamil</p>
+            <p>Duration: 164 minutes</p>
+
+        </section>
+
+
+        <!-- Show Section -->
+        <section class="card">
+
+            <h2>🎭 Select Show</h2>
+
+            <label>Theatre</label>
+
+            <select id="theatre">
+                <option>PVR Cinemas</option>
+                <option>AGS Cinemas</option>
+                <option>Rohini Silver Screens</option>
+            </select>
+
+
+            <label>Date</label>
+
+            <input type="date" id="date">
+
+
+            <label>Show Time</label>
+
+            <select id="showTime">
+                <option>10:00 AM</option>
+                <option>01:30 PM</option>
+                <option>06:30 PM</option>
+                <option>09:30 PM</option>
+            </select>
+
+        </section>
+
+
+        <!-- Seat Section -->
+        <section class="card">
+
+            <h2>💺 Select Seats</h2>
+
+            <div class="screen">
+                SCREEN
+            </div>
+
+            <div id="seats" class="seats"></div>
+
+            <p>
+                Selected Seats:
+                <strong id="selectedSeats">None</strong>
+            </p>
+
+            <p>
+                Ticket Price:
+                ₹<strong id="total">0</strong>
+            </p>
+
+        </section>
+
+
+        <!-- Customer Section -->
+        <section class="card">
+
+            <h2>👤 Customer Details</h2>
+
+            <input
+                type="text"
+                id="customerName"
+                placeholder="Enter your name"
+            >
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder="Enter phone number"
+            >
+
+        </section>
+
+
+        <!-- Payment Section -->
+        <section class="card">
+
+            <h2>💳 Payment</h2>
+
+            <label>Payment Method</label>
+
+            <select id="paymentMethod">
+
+                <option value="UPI">
+                    UPI
+                </option>
+
+                <option value="Card">
+                    Credit / Debit Card
+                </option>
+
+                <option value="Cash">
+                    Cash at Counter
+                </option>
+
+            </select>
+
+
+            <div id="upiBox">
+
+                <input
+                    type="text"
+                    id="upi"
+                    placeholder="Enter UPI ID"
+                >
+
+            </div>
+
+
+            <div id="cardBox">
+
+                <input
+                    type="text"
+                    placeholder="Card Number"
+                    id="cardNumber"
+                >
+
+                <input
+                    type="text"
+                    placeholder="Card Holder Name"
+                    id="cardName"
+                >
+
+                <div class="row">
+
+                    <input
+                        type="text"
+                        placeholder="MM/YY"
+                        id="expiry"
+                    >
+
+                    <input
+                        type="password"
+                        placeholder="CVV"
+                        id="cvv"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <button onclick="bookTicket()">
+                🎟️ Book Ticket
+            </button>
+
+        </section>
+
+
+        <!-- Confirmation -->
+        <section
+            class="card confirmation"
+            id="confirmation"
+        >
+
+            <h2>✅ Booking Confirmed</h2>
+
+            <p id="ticketDetails"></p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 Movie Ticket Booking System
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
